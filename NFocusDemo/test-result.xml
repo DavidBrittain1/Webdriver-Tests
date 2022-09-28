@@ -1,0 +1,50 @@
+<test-run id="2" duration="27.176171" testcasecount="6" total="6" passed="4" failed="1" inconclusive="0" skipped="1" result="Failed" start-time="2022-09-09T 10:24:16Z" end-time="2022-09-09T 10:24:44Z">
+  <test-suite type="Assembly" name="NFocusDemo.dll" fullname="C:\Users\DavidBrittain\source\repos\NFocusDemo\NFocusDemo\bin\Debug\net6.0\NFocusDemo.dll" total="6" passed="4" failed="1" inconclusive="0" skipped="1" result="Failed" start-time="2022-09-09T 10:24:17Z" end-time="2022-09-09T 10:24:44Z" duration="27.176171">
+    <test-suite type="TestSuite" name="NFocusDemo" fullname="NFocusDemo" total="1" passed="1" failed="0" inconclusive="0" skipped="0" result="Passed" start-time="2022-09-09T 10:24:17Z" end-time="2022-09-09T 10:24:17Z" duration="0.078064">
+      <test-suite type="TestFixture" name="Tests" fullname="NFocusDemo.Tests" classname="NFocusDemo.Tests" total="1" passed="1" failed="0" inconclusive="0" skipped="0" result="Passed" start-time="2022-09-09T 10:24:17Z" end-time="2022-09-09T 10:24:17Z" duration="0.078064">
+        <test-case name="Test1" fullname="NFocusDemo.Tests.Test1" methodname="Test1" classname="Tests" result="Passed" start-time="2022-09-09T 10:24:17Z" end-time="2022-09-09T 10:24:17Z" duration="0.078064" asserts="0" seed="1369498739">
+          <output><![CDATA[Hi
+
+]]></output>
+        </test-case>
+      </test-suite>
+    </test-suite>
+    <test-suite type="TestSuite" name="NFocusDemo" fullname="NFocusDemo" total="5" passed="3" failed="1" inconclusive="0" skipped="1" result="Failed" start-time="2022-09-09T 10:24:17Z" end-time="2022-09-09T 10:24:44Z" duration="27.098107">
+      <test-suite type="TestSuite" name="Webdrivertests" fullname="NFocusDemo.Webdrivertests" total="5" passed="3" failed="1" inconclusive="0" skipped="1" result="Failed" start-time="2022-09-09T 10:24:17Z" end-time="2022-09-09T 10:24:44Z" duration="27.098107">
+        <test-suite type="TestFixture" name="FirstWebDriverTests" fullname="NFocusDemo.Webdrivertests.FirstWebDriverTests" classname="NFocusDemo.Webdrivertests.FirstWebDriverTests" total="3" passed="1" failed="1" inconclusive="0" skipped="1" result="Failed" start-time="2022-09-09T 10:24:17Z" end-time="2022-09-09T 10:24:26Z" duration="8.81127">
+          <test-case name="DragDrop" fullname="NFocusDemo.Webdrivertests.FirstWebDriverTests.DragDrop" methodname="DragDrop" classname="FirstWebDriverTests" result="Skipped" start-time="2022-09-09T 10:24:17Z" end-time="2022-09-09T 10:24:17Z" duration="0.000236" asserts="0" seed="1337163584">
+            <output><![CDATA[Don't need to run this
+]]></output>
+          </test-case>
+          <test-case name="Test1" fullname="NFocusDemo.Webdrivertests.FirstWebDriverTests.Test1" methodname="Test1" classname="FirstWebDriverTests" result="Failed" start-time="2022-09-09T 10:24:17Z" end-time="2022-09-09T 10:24:21Z" duration="4.416011" asserts="0" seed="658437152">
+            <output><![CDATA[Starting test
+Navigate to login page
+Entering login details
+
+]]></output>
+            <failure>
+              <message>System.IO.FileNotFoundException : Test attachment file path could not be found.</message>
+              <stack-trace>   at NUnit.Framework.TestContext.AddTestAttachment(String filePath, String description)
+   at NFocusDemo.Webdrivertests.FirstWebDriverTests.Test1() in C:\Users\DavidBrittain\source\repos\NFocusDemo\NFocusDemo\Webdrivertests\FirstWebDriverTests.cs:line 46</stack-trace>
+            </failure>
+          </test-case>
+          <test-case name="textareacapture" fullname="NFocusDemo.Webdrivertests.FirstWebDriverTests.textareacapture" methodname="textareacapture" classname="FirstWebDriverTests" result="Passed" start-time="2022-09-09T 10:24:21Z" end-time="2022-09-09T 10:24:26Z" duration="4.395023" asserts="0" seed="724390785" />
+        </test-suite>
+        <test-suite type="TestFixture" name="FormsTest" fullname="NFocusDemo.Webdrivertests.FormsTest" classname="NFocusDemo.Webdrivertests.FormsTest" total="1" passed="1" failed="0" inconclusive="0" skipped="0" result="Passed" start-time="2022-09-09T 10:24:26Z" end-time="2022-09-09T 10:24:32Z" duration="6.516589">
+          <test-case name="forms" fullname="NFocusDemo.Webdrivertests.FormsTest.forms" methodname="forms" classname="FormsTest" result="Passed" start-time="2022-09-09T 10:24:26Z" end-time="2022-09-09T 10:24:32Z" duration="6.516589" asserts="0" seed="1512100112" />
+        </test-suite>
+        <test-suite type="TestFixture" name="ProductSearch" fullname="NFocusDemo.Webdrivertests.ProductSearch" classname="NFocusDemo.Webdrivertests.ProductSearch" total="1" passed="1" failed="0" inconclusive="0" skipped="0" result="Passed" start-time="2022-09-09T 10:24:32Z" end-time="2022-09-09T 10:24:44Z" duration="11.770248">
+          <test-case name="SearchItem" fullname="NFocusDemo.Webdrivertests.ProductSearch.SearchItem" methodname="SearchItem" classname="ProductSearch" result="Passed" start-time="2022-09-09T 10:24:32Z" end-time="2022-09-09T 10:24:44Z" duration="11.770248" asserts="0" seed="1328929025">
+            <properties>
+              <property name="Category" value="functional" />
+            </properties>
+            <output><![CDATA[Test has been completed
+
+]]></output>
+          </test-case>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <errors />
+  </test-suite>
+</test-run>

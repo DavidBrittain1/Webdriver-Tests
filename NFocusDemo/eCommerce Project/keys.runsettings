@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RunSettings>
+	<RunConfiguration>
+		<EnvironmentVariables>
+			<!--List of secret environment variables and their values-->
+			<username>originalemail@outlook.com</username>
+			<password>grandmastercarlsen</password>
+			<BROWSER>edge</BROWSER>
+		</EnvironmentVariables>
+	</RunConfiguration>
+</RunSettings>
