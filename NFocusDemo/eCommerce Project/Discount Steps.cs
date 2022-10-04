@@ -38,11 +38,12 @@ namespace MyNamespace
         }
 
         [Then(@"(.*)% discount will be applied to the total price")]
-        public void ThenDiscountWillBeAppliedToTheTotalPrice(int p0)
+        public void ThenDiscountWillBeAppliedToTheTotalPrice(string p0)
         {
             // Applying Discount
             _driver.FindElement(By.CssSelector("#post-6 > div > div > form.checkout_coupon.woocommerce-form-coupon > p.form-row.form-row-last > button")).Click();
-
+            p0 = "0.15";
+            decimal discountNumber = Convert.ToDecimal(p0);
             // Checking the Discount is 15%
             Thread.Sleep(2000);
             string total = _driver.FindElement(By.CssSelector("#order_review > table > tfoot > tr.order-total > td > strong > span > bdi")).Text;
@@ -50,7 +51,7 @@ namespace MyNamespace
             var subTotalString = subTotal.Text;
             string sTotalString = subTotalString.Remove(0, 1);
             decimal newSubTotal = Convert.ToDecimal(sTotalString);
-            decimal discount = newSubTotal * 0.15m;
+            decimal discount = newSubTotal * discountNumber;
             decimal priceAfterDiscount = newSubTotal - discount;
 
             /// Adding shipping cost 
@@ -63,6 +64,8 @@ namespace MyNamespace
 
             /// Trimming the extra decimal places for a happy comparison
             string suitablePriceComparison = totalPrice.Remove(5, 2);
+            Console.WriteLine(suitablePriceComparison);
+            Console.WriteLine(total);
             Assert.That(total, Does.Match("£" + suitablePriceComparison));
         }
     }

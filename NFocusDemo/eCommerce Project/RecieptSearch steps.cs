@@ -67,7 +67,11 @@ namespace NFocusDemo.eCommerce_Project
             _driver.FindElement(By.CssSelector("#billing_address_1")).SendKeys("40 Blue Street");
             _driver.FindElement(By.CssSelector("#billing_city")).Clear();
             _driver.FindElement(By.CssSelector("#billing_city")).SendKeys("London");
-            Thread.Sleep(2000);
+            helpersinstance myhelper = new helpersinstance(_driver);
+            
+            // Short Thread.Sleep used to click the button after the refresh
+            myhelper.WaitForElement(7, By.CssSelector("#place_order"));
+            Thread.Sleep(500);
             _driver.FindElement(By.CssSelector("#place_order")).Click();
 
             Thread.Sleep(2000);
