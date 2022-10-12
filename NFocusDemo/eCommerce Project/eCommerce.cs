@@ -21,7 +21,7 @@ namespace NFocusDemo.eCommerce_Project
         ///  Turn test cases into feature files
         /// </summary>
 
-        [Test, Category("eCommerce_Cases")]
+        [Test, Category("NonBDD Solution")]
         public void Login()
         {       
             // Instantiating Chrome and going to website
@@ -92,7 +92,7 @@ namespace NFocusDemo.eCommerce_Project
             driver.Quit();
         }
 
-        [Test, Category("eCommerce_Cases")]
+        [Test, Category("NonBDD Solution")]
 
         public void checkout()
         {
