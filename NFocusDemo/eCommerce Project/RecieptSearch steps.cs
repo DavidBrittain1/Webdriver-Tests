@@ -36,8 +36,9 @@ namespace NFocusDemo.eCommerce_Project
         {
             this._driver = (IWebDriver)_scenarioContext["driver"];
             _driver.FindElement(By.LinkText("Dismiss")).Click();
-            _driver.FindElement(By.CssSelector("#menu-item-43 > a")).Click();
-            _driver.FindElement(By.CssSelector("#main > ul > li.product.type-product.post-28.status-publish.instock.product_cat-accessories.has-post-thumbnail.sale.shipping-taxable.purchasable.product-type-simple > a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart")).Click();
+            _driver.FindElement(By.LinkText("Shop")).Click();
+            ShoppingCartPOM cart = new ShoppingCartPOM(_driver);
+            cart.AddItem();
             helpersinstance myhelper = new helpersinstance(_driver);
             Thread.Sleep(2000);
             myhelper.WaitForElement(2, By.LinkText("View cart"));
